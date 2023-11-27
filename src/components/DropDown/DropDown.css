@@ -1,0 +1,38 @@
+.navbar-dropdown{
+    background-color: white;
+    color: var(--white-color);
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    /* border: 1px solid red; */
+    margin-top: 5px;
+    font-family: 'Exo';
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+.navbar-dropdown.open{
+    height: 270px;
+    box-shadow: 4px 4px 4px rgb(128, 128, 128);
+}
+
+.navbar-options-dropdown {
+    list-style: none;
+    padding-top: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+} 
+
+.nav-item-dropdown {
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

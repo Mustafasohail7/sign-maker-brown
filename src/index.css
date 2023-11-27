@@ -5,3 +5,8 @@ p {
 body{
   margin: 0px 0px;
 }
+
+:root{
+  --primary-color: #432818;
+  --secondary-bg-color: #D6CCC2;
+}
