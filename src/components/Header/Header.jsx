@@ -6,11 +6,11 @@ import { IoSearchOutline } from 'react-icons/io5'
 
 import logo from '../../assets/logo.svg'
 import { BsCart } from 'react-icons/bs'
-import { FaBars } from 'react-icons/fa'
+import { FaBarsStaggered } from 'react-icons/fa6'
 
 const Header = ({orders,options,setDropDown,setOverlayActive}) => {
 
-    const [selected,setSelected] = useState(2)
+    const [selected,setSelected] = useState(0)
 
     useEffect(() => { 
         const handleScroll = () => {
@@ -49,7 +49,7 @@ const Header = ({orders,options,setDropDown,setOverlayActive}) => {
         <div className='header-container'>
             <div className='header-left'>
                 <div className='toggle-bar' onClick={toggleMenu}>
-                    <FaBars/>
+                    <FaBarsStaggered/>
                 </div>
                 <div className='logo-container'>
                     <img src={logo} alt='logo' className='logo' />
@@ -66,9 +66,17 @@ const Header = ({orders,options,setDropDown,setOverlayActive}) => {
                         </div>
                     ))}
                 </div>
-                <div className='cart-container' onClick={()=>setOverlayActive(true)}>
+                <div className='cart-container' 
+                    // onClick={()=>setOverlayActive(true)}
+                >
                     <div className="search-bar-container">
-                        <input type="text" className='search-bar' placeholder="Search..."/>
+                        {/* <div className='search-bar-icon'>
+                            <IoSearchOutline/>
+                            <div className='search-text'>Search...</div>
+                        </div> */}
+                        <input type="text" className='search-bar' 
+                        placeholder="Search..."
+                        />
                     </div>
                     <div className='cart-icon-container'>
                         <BsCart className='cart'/>
