@@ -1,10 +1,10 @@
-import HeaderMain from '../components/HeaderMain'
+import BannerMain from '../components/BannerMain'
 
 const HomePage = () => {
   return (
-    <>
-        <HeaderMain/>
-    </>
+    <div>
+        <BannerMain/>
+    </div>
   )
 }
 
