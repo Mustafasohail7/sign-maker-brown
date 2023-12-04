@@ -2,6 +2,8 @@ import './Testimonials.css'
 
 import star from '../../assets/star.svg'
 
+import SliderCarousel from './SliderCarousel'
+
 const Testimonials = () => {
 
   const stars = [0,1,2,3,4]
@@ -20,15 +22,15 @@ const Testimonials = () => {
                 <div className='testimonials-stars'>
                     {stars.map((x, index) => {
                         return (
-                          <div className='star-place'>
-                            <img key={index} src={star} alt='star' />
+                          <div key={index} className='star-place'>
+                            <img src={star} alt='star' />
                           </div>
                         )
                     })}
                 </div>
             </div>
             <div className='testimonials'>
-            {/* carousels */}
+              <SliderCarousel />
             </div>
         </div>
     </div>
