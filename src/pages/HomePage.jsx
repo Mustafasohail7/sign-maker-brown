@@ -1,5 +1,12 @@
 import BannerMain from '../components/BannerMain'
 import Products from '../components/Products/Products'
+import Gallery from '../components/Gallery/Gallery'
+import CustomerVideos from '../components/CustomerVideos/CustomerVideos'
+import Testimonials from '../components/Testimonials/Testimonials'
+import Objects from '../components/Objects/Objects'
+import Blog from '../components/Blog/Blog'
+import FAQ from '../components/FAQ/FAQ'
+import Footer from '../components/Footer/Footer'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
@@ -19,15 +26,10 @@ const HomePage = () => {
     <div>
         <BannerMain/>
         <div style={{backgroundColor: 'var(--secondary-bg-color)'}}>
-          <Products/>
-          <Slider {...settings}>
-            <div style={{border: '1px solid black'}}>
-                hello
-            </div>
-            <div>
-                hi
-            </div>
-          </Slider>
+          {/* <Products/> */}
+          <Gallery/>
+          <CustomerVideos/>
+          <Testimonials/>
         </div>
     </div>
   )
