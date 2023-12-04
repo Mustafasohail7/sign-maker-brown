@@ -11,26 +11,26 @@ const reviews = [
 
 ]
 
-{/* {reviews.map((review)=> (
-            <div key={review.id} className="review-container">
-                <div className="stars-container">
-                    {review.stars.map((x, index) => (
-                        <div key={index} className="star-place">
-                            <img src={star} alt="star" className="star" />
-                        </div>
-                    ))}
+{reviews.map((review)=> (
+    <div key={review.id} className="review-container">
+        <div className="stars-container">
+            {review.stars.map((x, index) => (
+                <div key={index} className="star-place">
+                    <img src={star} alt="star" className="star" />
                 </div>
-                <div className="review-content">
-                    {review.review}
-                </div>
-                <div className="review-profile-container">
-                    <div className="review-profile">
-                        <img src={review.image} className="review-profile-img" />
-                    </div>
-                    <div className="review-name-container">
-                        <p className="reviewer-name">{review.name}</p>
-                        <p className="reviewer-title">{review.title}</p>
-                    </div>
-                </div>
+            ))}
+        </div>
+        <div className="review-content">
+            {review.review}
+        </div>
+        <div className="review-profile-container">
+            <div className="review-profile">
+                <img src={review.image} className="review-profile-img" />
             </div>
-          ))} */}
+            <div className="review-name-container">
+                <p className="reviewer-name">{review.name}</p>
+                <p className="reviewer-title">{review.title}</p>
+            </div>
+        </div>
+    </div>
+))}
