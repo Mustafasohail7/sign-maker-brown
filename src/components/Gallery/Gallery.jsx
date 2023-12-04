@@ -7,6 +7,8 @@ import gallery_2 from '../../assets/gallery_2.png'
 import gallery_3 from '../../assets/gallery_3.png'
 import gallery_4 from '../../assets/gallery_4.png'
 
+import arrow from '../../assets/arrow-left.svg'
+
 const Gallery = () => {
 
     const [selectedOption, setSelectedOption] = useState('all')
@@ -43,12 +45,20 @@ const Gallery = () => {
                 </div>
             </div>
             <div className='main-gallery-container'>
-                <div className='gallery-images-container'>
-                {gallery_images.map((image)=> (
-                    <div className='gallery-image-container' key={image.id}>
-                        <img src={image.image} alt='gallery' className='gallery-image'/>
+                <div className='gallery-images-super-container'>
+                    <div className='arrow-div'>
+                        <img src={arrow} className='arrow left' />
                     </div>
-                ))}
+                    <div className='gallery-images-container'>
+                    {gallery_images.map((image)=> (
+                        <div className='gallery-image-container' key={image.id}>
+                            <img src={image.image} alt='gallery' className='gallery-image'/>
+                        </div>
+                    ))}
+                    </div>
+                    <div className='arrow-div'>
+                        <img src={arrow} className='arrow right' />
+                    </div>
                 </div>
                 <div className='gallery-show-more'>
                     <button className='show-more-btn'>show more</button>

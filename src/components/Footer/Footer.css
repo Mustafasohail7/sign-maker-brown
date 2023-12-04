@@ -4,6 +4,7 @@
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .footer-container{
