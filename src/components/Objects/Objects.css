@@ -1,0 +1,57 @@
+.objects-div{
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 30px;
+    box-sizing: border-box;
+}
+
+.objects-container{
+    border: 1px solid blue;
+    background-color: #FFF;
+    border-radius: 40px;
+    box-shadow: 0px 0px 37.66px 0px rgba(0, 0, 0, 0.05);
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.object{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid gray;
+}
+
+.object-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.object-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.object-main-text{
+    color: var(--000, #000);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.object-side-text{
+    color: rgba(0, 0, 0, 0.40);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
