@@ -1,8 +1,12 @@
 import './FAQ.css'
 
+import { useState } from 'react'
+
 import caret from '../../assets/caret-up.svg'
 
 const FAQ = () => {
+
+    const [selected, setSelected] = useState(null)
 
     const faqs = [
         {id:0,question: 'Hvordan fungerer det?', answer: 'Bogstaverne kører på strøm og sættes sammen ved hjælp af magneter, der viderefører strømmen, så bogstaverne øjeblikkeligt lyser. Der er altså ikke brug for værktøj eller lignende. Strømforsyning følger automatisk altid gratis med i din ordre. NB: Der sidder et beskyttelsesfolie på bogstaverne når du modtager dem, som skal pilles af.'},
@@ -11,6 +15,14 @@ const FAQ = () => {
         {id:3,question:'Er jeres produkter EU godkendt?',answer:'Ja, vores produkter er CE godkendt og lever op til alle EU krav.'},
     ]
 
+    const handleFAQ = (id) => {
+        if(selected===id){
+            setSelected(null)
+        }else{
+            setSelected(id)
+        }
+    }
+
   return (
     <div className='faq-div'>
         <div className='faq-container'>
@@ -18,15 +30,15 @@ const FAQ = () => {
             <div className='faq-cont'>
             {faqs.map((faq) => (
                 <div key={faq.id} className='faq'>
-                    <div className='faq-question-holder'>
+                    <div className='faq-question-holder' onClick={()=>handleFAQ(faq.id)}>
                         <p className='faq-question'>
                             {faq.question}
                         </p>
                         <div className='caret-img-place'>
-                            <img src={caret} className='caret-img' />
+                            <img src={caret} className={`caret-img ${faq.id===selected ? 'rotate' : ''}`} />
                         </div>
                     </div>
-                    <div className='faq-answer'>
+                    <div className={`faq-answer ${selected===faq.id ? 'visible' : ''}`}>
                         {faq.answer}
                     </div>
                 </div>
