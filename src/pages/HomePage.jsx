@@ -28,7 +28,7 @@ const HomePage = ({isMobile}) => {
         <div style={{backgroundColor: 'var(--secondary-bg-color)'}}>
           <Products/>
           <Gallery isMobile={isMobile}/>
-          <CustomerVideos/>
+          <CustomerVideos isMobile={isMobile} />
           <Testimonials/>
           <Objects/>
           <Blog isMobile={isMobile}/>

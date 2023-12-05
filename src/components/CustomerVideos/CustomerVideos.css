@@ -1,6 +1,6 @@
 .videos-div{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
     padding: 100px 1rem;
     display: flex;
@@ -10,7 +10,7 @@
 
 .videos-container{
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,11 +31,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .videos-holder{
     width: 100%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #FFF;
+    border: 2px solid #FFF;
 }
 
 .video-white-boundary.center{
@@ -61,18 +62,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px dashed #FFF;
+    border: 2px dashed #FFF;
 }
 
 .video-holder{
+    /* border: 1px solid blue; */
     width: 90%;
     height: 90%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .video-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.video-slider-div{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0rem 10rem;
+}
+
+@media screen and (max-width:785px){
+    .video-holder{
+        width: 100%;
+    }
+    .videos-carousel{
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+    .video-white-boundary{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 300px;
+    }
+    .video-img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:550px){
+    .videos-container{
+        gap: 1rem;
+    }
+    .video-slider-div{
+        padding: 0rem 3rem;
+    }
+    .videos-heading{
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width:350px){
+    .video-slider-div{
+        padding: 0rem 1rem;
+    }
+    .videos-heading{
+        font-size: 20px;
+    }
 }
