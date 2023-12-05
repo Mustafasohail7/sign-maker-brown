@@ -31,7 +31,7 @@ const HomePage = ({isMobile}) => {
           <CustomerVideos/>
           <Testimonials/>
           <Objects/>
-          <Blog/>
+          <Blog isMobile={isMobile}/>
           <FAQ/>
           <Footer/>
         </div>
