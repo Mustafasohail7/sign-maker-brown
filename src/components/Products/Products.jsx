@@ -34,6 +34,8 @@ const Products = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
+        centerMode: true,
+        rtl: true,
         responsive: [
             {
                 breakpoint: 1600,

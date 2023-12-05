@@ -103,6 +103,9 @@
     .video-img{
         width: 90%;
     }
+    .slick-arrow{
+        display: none !important;
+    }
 }
 
 @media screen and (max-width:550px){

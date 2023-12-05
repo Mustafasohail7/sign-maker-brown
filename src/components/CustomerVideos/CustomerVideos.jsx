@@ -20,7 +20,7 @@ const CustomerVideos = ({isMobile}) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: null,
-        prevArrow: null
+        prevArrow: null,
     }
 
   return (
