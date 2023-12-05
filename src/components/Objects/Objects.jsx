@@ -16,7 +16,7 @@ const Objects = () => {
     <div className='objects-div'>
       <div className='objects-container'>
         {objects.map((object) => (
-            <div className='object'>
+            <div key={object.id} className='object'>
                 <div className='object-logo'>
                     <img src={object.image} alt='object' />
                 </div>

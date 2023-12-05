@@ -38,8 +38,8 @@ const Blog = () => {
             </div>
             <div className='side-blogs-container'>
             {side_blogs.map((side_blog) => (
-                <div className='side-blog'>
-                    <div key={side_blog.id} className='side-blog-img-place'>
+                <div key={side_blog.id} className='side-blog'>
+                    <div className='side-blog-img-place'>
                         <img className='side-blog-img' src={side_blog.image}/>
                     </div>
                     <div className='side-blog-info-container'>

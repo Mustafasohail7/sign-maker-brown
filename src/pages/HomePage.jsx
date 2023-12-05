@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 
-const HomePage = () => {
+const HomePage = ({isMobile}) => {
 
   var settings = {
     dots: true,
@@ -27,7 +27,7 @@ const HomePage = () => {
         <BannerMain/>
         <div style={{backgroundColor: 'var(--secondary-bg-color)'}}>
           {/* <Products/> */}
-          <Gallery/>
+          <Gallery isMobile={isMobile}/>
           <CustomerVideos/>
           <Testimonials/>
           <Objects/>
