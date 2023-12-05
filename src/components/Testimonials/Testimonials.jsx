@@ -23,7 +23,7 @@ const Testimonials = () => {
                     {stars.map((x, index) => {
                         return (
                           <div key={index} className='star-place'>
-                            <img src={star} alt='star' />
+                            <img src={star} alt='star' className='star' />
                           </div>
                         )
                     })}

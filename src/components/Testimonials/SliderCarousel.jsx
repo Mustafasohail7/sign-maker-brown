@@ -29,20 +29,44 @@ const SliderCarousel = () => {
         dots: true,
         //   infinite: true,
         speed: 1000,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                    rows: 3,
+                    slidesPerRow: 1,
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                    rows: 2,
+                    slidesPerRow: 1,
+                }
+            }
+        ]
     }
-
-    const numbers = [1,2,3,4,5,6,7,8]
 
 
     return (
         <Slider {...settings} className="slider-container">
-          {/* {numbers.map((number,index)=> (
-            <div key={index} className="slider-item" >
-                {number}
-            </div>
-          ))} */}
           {reviews.map((review) => (
             <div key={review.id} className="review-div">
             <div className="review-container">

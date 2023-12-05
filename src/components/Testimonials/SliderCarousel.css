@@ -5,7 +5,7 @@
 
 .slider-div{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,14 +14,14 @@
 
 .slider-container{
     /* width: 100%; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .review-div{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,11 +33,11 @@
 
 .review-container{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: #FFF;
     padding: 20px 20px;
     box-sizing: border-box;
@@ -53,8 +53,8 @@
 }
 
 .star-place-review{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     position: relative;
     overflow: hidden;
 }
@@ -127,4 +127,27 @@
     line-height: 130%; /* 15.388px */
     letter-spacing: 0.095px;
     text-transform: capitalize;
+}
+
+@media screen and (min-width:1600px) {
+    .star-place-review{
+        width: 20px;
+        height: 20px;
+    }
+    .review-content{
+        font-size: 1.5rem;
+    }
+    .review-profile{
+        width: 80px;
+        height: 80px;
+    }
+    .reviewer-name, .reviewer-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:785px){
+    .review-div{
+        padding: 10px 0px;
+    }
 }
