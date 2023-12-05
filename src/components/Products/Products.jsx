@@ -1,6 +1,10 @@
 import './Products.css'
 
-import { useState } from 'react'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
+
+import { useRef } from 'react'
 
 import left_arrow from '../../assets/left-arrow.svg'
 import right_arrow from '../../assets/right-arrow.svg'
@@ -11,9 +15,10 @@ import product_3 from '../../assets/product_3.png'
 import product_4 from '../../assets/product_4.png'
 import product_5 from '../../assets/product_5.png'
 
-import ProductCarousel from './ProductCarousel'
 
 const Products = () => {
+
+    const sliderRef = useRef()
 
     const products = [
         {id:0, name: 'magnetic-sign', price: 20, image:product_1},
@@ -23,6 +28,42 @@ const Products = () => {
         {id:4, name: 'kitchen', price: 91, image:product_5},
     ]
 
+    var settings = {
+        // dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            }
+        ]
+    } 
+
+    const handleNext = () => {
+        if(sliderRef.current){
+            sliderRef.current.slickNext()
+        }
+    }
+
+    const handlePrev = () => {
+        if(sliderRef.current){
+            sliderRef.current.slickPrev()
+        }
+    }
+
   return (
     <div className='products-div'>
         <div className='products-container'>
@@ -31,13 +72,30 @@ const Products = () => {
             </div>  
             <div className='products-products-container'>
                 <div className='products-items-container'>
-                    <ProductCarousel products={products} />
+                    <Slider ref={sliderRef} {...settings} className="products-carousel">
+                        {products.map((product) => (
+                            <div key={product.id} className="product-item-div">
+                                <div className='product-item'
+                                // className={`product ${index === currentIndex ? 'active' : ''}`}
+                                >
+                                    <div className='product-item-img-place'>
+                                        <img src={product.image} 
+                                        className='product-item-img' alt='product' />
+                                    </div>
+                                    <div className='product-item-info'>
+                                        <p className='product-item-name'>{product.name}</p>
+                                        <p className='product-item-price'>$ {product.price}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
                 <div className='products-arrows-container'>
                     {/* <IoMdArrowBack className='products-arrow' />
                     <IoMdArrowForward className='products-arrow' /> */}
-                    <img src={left_arrow} className='products-arrow' />
-                    <img src={right_arrow} className='products-arrow' />
+                    <img src={left_arrow} className='products-arrow' onClick={handlePrev}/>
+                    <img src={right_arrow} className='products-arrow' onClick={handleNext}/>
                 </div>
             </div>
         </div>  

@@ -1,6 +1,6 @@
 .products-div{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 100px 0px;
     box-sizing: border-box;
     display: flex;
@@ -10,7 +10,7 @@
 
 .products-container{
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@
 
 .products-heading-container{
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
 }
 
 .products-products-container{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
 }
 
 .products-items-container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -58,9 +58,23 @@
     gap: 3rem;
 }
 
+.products-carousel{
+    width: 100%;
+    /* border: 1px solid orange; */
+}
+
+.product-item-div{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+}
+
 .product-item{
-    border: 1px solid red;
-    width: 10%;
+    /* border: 1px solid red; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +87,7 @@
 .product-item-img-place{
     width: 100%;
     height: 220px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow: hidden;
     position: relative;
     border-radius: 20px 20px 0px 0px;
@@ -129,4 +143,54 @@
 
 .products-arrow{
     cursor: pointer;
+}
+
+@media screen and (min-width:1600px){
+    .product-item-img-place{
+        height: 400px;
+    }
+    .products-arrow{
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .product-item-img-place{
+        height: 180px;
+    }
+    .product-item-name{
+        font-size: 20px;
+    }
+    .products-heading{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:750px){
+    .products-div{
+        padding: 30px 0px;
+    }
+    .product-item-img-place{
+        height: 150px;
+    }
+    .product-item-info{
+        padding: 0.5rem 1rem;
+    }
+    .product-item-name{
+        font-size: 13px;
+    }
+    .product-item-price{
+        font-size: 14px;
+    }
+    .products-heading{
+        font-size: 25px;
+    }
+    .products-arrows-container{
+        gap: 1rem;
+    }
+    .products-arrow{
+        width: 30px;
+        height: 30px;
+    }
 }
