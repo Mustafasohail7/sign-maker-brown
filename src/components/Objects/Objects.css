@@ -1,5 +1,5 @@
 .objects-div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -9,9 +9,9 @@
 }
 
 .objects-container{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     background-color: #FFF;
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 0px 0px 37.66px 0px rgba(0, 0, 0, 0.05);
     width: 80%;
     flex-wrap: wrap;
@@ -20,15 +20,34 @@
     align-items: center;
 }
 
-.object{
+.object-div{
+    width: 33%;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid gray;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+.object{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    gap: 1rem;
+    border-right: 1px solid #B6B6B6;;
+}
+
+.object.no-line{
+    border-right: none;
 }
 
 .object-logo{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +56,7 @@
 .object-text{
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
 }
 
 .object-main-text{
@@ -46,6 +66,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-transform: capitalize;
 }
 
 .object-side-text{
@@ -55,4 +76,57 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width:1200px){
+    .objects-container{
+        width: 100%;
+    }
+    .object-main-text{
+        font-size: 18px;
+    }
+    .object-side-text{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:785px){
+    .objects-div{
+        padding: 30px 30px;
+    } 
+    .objects-container{
+        flex-direction: column;
+        background: none;
+        width: 70%;
+    }
+    .object-div{
+        width: 100%;
+    }
+    .object{
+        background: #FFF;
+        border-radius: 25px;
+        padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .objects-container{
+        width: 90%;
+    }
+    .object-main-text{
+        font-size: 16px;
+    }
+    .object-side-text{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:350px){
+    .objects-container{
+        width: 100%;
+    }
+    .objects-div{
+        padding: 30px 10px;
+    }
 }
