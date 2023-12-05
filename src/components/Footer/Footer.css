@@ -1,5 +1,5 @@
 .footer-div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     background-color: var(--primary-color);
     display: flex;
@@ -8,7 +8,7 @@
 }
 
 .footer-container{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 90%;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
 
 .footer-with-logo{
     width: 40%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 .footer-info-container{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@
 }
 
 .footer-info-part{
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -88,3 +88,88 @@
     line-height: normal;
 }
 
+@media screen and (min-width:1600px){
+    .short-bio{
+        font-size: 23px;
+    }
+    .footer-info-heading{
+        font-size: 27px;
+    }
+    .footer-info-items p{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .footer-container{
+        width: 99%;
+        gap: 0.3rem;
+    }
+    .short-bio{
+        font-size: 15px;
+    }
+    .footer-info-heading{
+        font-size: 15px;
+    }
+    .footer-info-items p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:750px){
+    .footer-container{
+        gap: 0rem;
+    }
+    .footer-with-logo{
+        width: 30%;
+        gap: 1rem;
+    }
+    .socials-div{
+        width: 70%;
+    }
+    .footer-info-container{
+        width: 70%;
+    }
+    .short-bio{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .footer-info-heading{
+        font-size: 14px;
+    }
+    .footer-info-items p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer-with-logo{
+        width: 90%;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .short-bio{
+        /* display: none; */
+        text-align: center;
+    }
+    .socials-div{
+        width: 100%;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+    }
+    .footer-info-container{
+        width: 90%;
+    }
+    .footer-info-heading{
+        font-size: 12px;
+    }
+    .footer-info-items p{
+        font-size: 10px;
+    }
+}
