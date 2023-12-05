@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       console.log(window.innerWidth)
-      setIsMobile(window.innerWidth <= 780); // Adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 785); // Adjust the breakpoint as needed
     };
 
     // Initial check on component mount
