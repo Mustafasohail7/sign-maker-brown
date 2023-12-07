@@ -4,6 +4,7 @@ p {
 
 body{
   margin: 0px 0px;
+  background: var(--secondary-bg-color);
 }
 
 :root{

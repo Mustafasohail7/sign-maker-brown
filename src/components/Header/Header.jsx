@@ -2,15 +2,19 @@ import './Header.css'
 
 import { useState, useEffect } from 'react'
 
-import { IoSearchOutline } from 'react-icons/io5'
+// import { IoSearchOutline } from 'react-icons/io5'
+import { useNavigate } from 'react-router-dom'
 
 import logo from '../../assets/logo.svg'
 import { BsCart } from 'react-icons/bs'
 import { FaBarsStaggered } from 'react-icons/fa6'
 
-const Header = ({orders,options,setDropDown,setOverlayActive}) => {
+const Header = ({orders,options,setDropDown,path,setOverlayActive}) => {
 
-    const [selected,setSelected] = useState(0)
+    const navigate = useNavigate()
+
+    const [selected,setSelected] = useState(path[0].id)
+    const home = path[0].id === 0
 
     useEffect(() => { 
         const handleScroll = () => {
@@ -44,9 +48,14 @@ const Header = ({orders,options,setDropDown,setOverlayActive}) => {
         }
     })
 
+    const handleClick = (id) => {
+        setSelected(id)
+        navigate(options[id].link)
+    }
+
   return (
     <div className='header-div'>
-        <div className='header-container'>
+        <div className={`header-container ${home ? 'transparent' : ''}`}>
             <div className='header-left'>
                 <div className='toggle-bar' onClick={toggleMenu}>
                     <FaBarsStaggered/>
@@ -60,13 +69,13 @@ const Header = ({orders,options,setDropDown,setOverlayActive}) => {
                     {options.map(option => (
                         <div key={option.id} 
                         className={`option ${selected === option.id ? 'selected' : ''}`}
-                        onClick={() => setSelected(option.id)}
+                        onClick={()=>handleClick(option.id)}
                         >
                             {option.name}
                         </div>
                     ))}
                 </div>
-                <div className='cart-container' 
+                <div className={`cart-container ${home ? 'transparent' : ''}`}
                     // onClick={()=>setOverlayActive(true)}
                 >
                     <div className="search-bar-container">
