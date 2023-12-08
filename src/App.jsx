@@ -8,6 +8,7 @@ import Error from './pages/ErrorPage'
 import Letters from './pages/LettersPage'
 import AcrylicLetters from './pages/AcrylicLettersPage'
 import LightBox from './pages/LightBoxPage'
+import Quote from './pages/QuotePage'
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
     {
       name: 'LED Lightbox', path: '/led-lightbox', exact: true,
       element: <LightBox isMobile={isMobile} />,
+    },
+    {
+      name: 'Free Quote', path: '/quote', exact: true,
+      element: <Quote isMobile={isMobile} />,
     }
   ])
 

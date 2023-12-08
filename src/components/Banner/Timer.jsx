@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import moment from 'moment';
 
 const Timer = ({ expiryDate }) => {
@@ -7,10 +7,10 @@ const Timer = ({ expiryDate }) => {
     const expirationTime = moment(expiryDate);
     const duration = moment.duration(expirationTime.diff(now));
 
-    const days = duration.days();
-    const hours = duration.hours();
-    const minutes = duration.minutes();
-    const seconds = duration.seconds();
+    const days = duration.days().toString().padStart(2, '0');
+    const hours = duration.hours().toString().padStart(2, '0');
+    const minutes = duration.minutes().toString().padStart(2, '0');
+    const seconds = duration.seconds().toString().padStart(2, '0');
 
     return { days, hours, minutes, seconds };
   };

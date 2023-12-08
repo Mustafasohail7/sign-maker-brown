@@ -6,6 +6,19 @@
     align-items: center;
     padding: 100px 30px;
     box-sizing: border-box;
+    position: relative;
+}
+
+.dots-place.faq-c{
+    right: auto;
+    left: 0px;
+}
+
+.dots-place.faq-c.right{
+    top: auto;
+    left: auto;
+    /* bottom: -50%; */
+    right: 0px;
 }
 
 .faq-container{

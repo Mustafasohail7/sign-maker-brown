@@ -8,6 +8,7 @@ import { useRef } from 'react'
 
 import left_arrow from '../../assets/left-arrow.svg'
 import right_arrow from '../../assets/right-arrow.svg'
+import waves from '../../assets/waves.svg'
 
 import product_1 from '../../assets/product_1.png'
 import product_2 from '../../assets/product_2.png'
@@ -68,6 +69,16 @@ const Products = () => {
 
   return (
     <div className='products-div'>
+        <div className='waves-container'>
+            <div className='waves-place'>
+                <img src={waves} className='waves' alt='waves' />
+                {/* <img src={waves} className='waves' alt='waves' /> */}
+            </div>
+            <div className='waves-place'>
+                <img src={waves} className='waves' alt='waves' />
+                {/* <img src={waves} className='waves' alt='waves' /> */}
+            </div>
+        </div>
         <div className='products-container'>
             <div className='products-heading-container'>
                 <h2 className='products-heading'>our products</h2>

@@ -1,6 +1,7 @@
 import './Testimonials.css'
 
 import star from '../../assets/star.svg'
+import dots from '../../assets/dots.svg'
 
 import SliderCarousel from './SliderCarousel'
 
@@ -10,6 +11,9 @@ const Testimonials = () => {
 
   return (
     <div className='testimonials-div'>
+        <div className='dots-place testimonial-dots'>
+          <img src={dots} className='dots' />
+        </div>
         <div className='testimonials-container'>
             <div className='testimonials-heading'>
                 <p>testimonials</p>

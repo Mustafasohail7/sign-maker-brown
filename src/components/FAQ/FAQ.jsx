@@ -3,6 +3,7 @@ import './FAQ.css'
 import { useState } from 'react'
 
 import caret from '../../assets/caret-up.svg'
+import dots from '../../assets/dots.svg'
 
 const FAQ = () => {
 
@@ -25,6 +26,12 @@ const FAQ = () => {
 
   return (
     <div className='faq-div'>
+        <div className='dots-place faq-c'>
+            <img src={dots} className='dots' />
+        </div>
+        <div className='dots-place faq-c right'>
+            <img src={dots} className='dots' />
+        </div>
         <div className='faq-container'>
             <p className='faq-heading'>frequently asked questions</p>
             <div className='faq-cont'>

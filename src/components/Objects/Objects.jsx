@@ -4,6 +4,8 @@ import objects_1 from '../../assets/objects_1.svg'
 import objects_2 from '../../assets/objects_2.svg'
 import objects_3 from '../../assets/objects_3.svg'
 
+import sheets from '../../assets/sheets.svg'
+
 const Objects = () => {
 
     const objects = [
@@ -17,17 +19,29 @@ const Objects = () => {
       <div className='objects-container'>
         {objects.map((object) => (
             <div key={object.id} className='object-div'>
-            <div className={`object ${object.id===2 ? 'no-line' : ''}`}>
-                <div className='object-logo'>
-                    <img src={object.image} alt='object' />
-                </div>
-                <div className='object-text'>
-                    <p className='object-main-text'>{object.name}</p>
-                    <p className='object-side-text'>{object.text}</p>
-                </div>
-            </div>
+              <div className={`object ${object.id===2 ? 'no-line' : ''}`}>
+                  <div className='object-logo'>
+                      <img src={object.image} alt='object' />
+                  </div>
+                  <div className='object-text'>
+                      <p className='object-main-text'>{object.name}</p>
+                      <p className='object-side-text'>{object.text}</p>
+                  </div>
+              </div>
+              <div className={`sheets-mobile ${object.id===0 ? 'yes' : ''}`}>
+                  <img src={sheets} className='sheets' />
+              </div>
+              <div className={`sheets-mobile right ${object.id===objects.length-1 ? 'yes' : ''}`}>
+                  <img src={sheets} className='sheets' />
+              </div>
             </div>
         ))}
+        <div className='sheets-place'>
+            <img src={sheets} className='sheets' />
+        </div>
+        <div className='sheets-place right'>
+            <img src={sheets} className='sheets' />
+        </div>
       </div>
     </div>
   )

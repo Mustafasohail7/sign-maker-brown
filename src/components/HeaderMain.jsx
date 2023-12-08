@@ -10,8 +10,9 @@ const HeaderMain = ({orders,setOverlayActive}) => {
     const options = [
       {id:0, name: 'home', link: '/'},
       {id:1, name: '3D letters', link: '/3d-letters'},
-      {id:2, name: 'acrylic letters', link: '/acrylic-letters'},
-      {id:3, name: 'LED display', link: '/led-lightbox'},
+      {id:2, name: 'LED lightbox', link: '/led-lightbox'},
+      {id:3, name: 'acrylic letters', link: '/acrylic-letters'},
+      {id:4, name: 'get a free quote', link:'/quote'}
   ]
 
     const location = useLocation()

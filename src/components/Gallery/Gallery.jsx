@@ -8,6 +8,8 @@ import gallery_3 from '../../assets/gallery_3.png'
 import gallery_4 from '../../assets/gallery_4.png'
 
 import arrow from '../../assets/arrow-left.svg'
+import dots from '../../assets/dots.svg'
+import waves from '../../assets/waves.svg'
 
 const Gallery = ({isMobile}) => {
 
@@ -46,6 +48,17 @@ const Gallery = ({isMobile}) => {
 
   return (
     <div className='gallery-div'>
+        <div className='dots-place'>
+            <img src={dots} className='dots' />
+        </div>
+        <div className='gallery-waves-container'>
+            <div className='gallery-waves-place'>
+                <img src={waves} className='gallery-waves' />
+            </div>
+            <div className='gallery-waves-place'>
+                <img src={waves} className='gallery-waves' />
+            </div>
+        </div>
         <div className='gallery-container'>
             <div className='gallery-headings-container'>
                 <p className='gallery-heading'>gallery</p>

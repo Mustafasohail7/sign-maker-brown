@@ -7,6 +7,32 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+}
+
+.waves-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.waves-place{
+    /* border: 1px solid red; */
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.waves{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .products-container{
@@ -193,5 +219,23 @@
     .products-arrow{
         width: 30px;
         height: 30px;
+    }
+    .waves-container{
+        top: 30px;
+        gap: 0.5rem;
+    }
+    .waves-place{
+        width: 100px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .waves-container{
+        top: 20px;
+    }
+    .waves-place{
+        width: 80px;
+        height: 15px;
     }
 }
