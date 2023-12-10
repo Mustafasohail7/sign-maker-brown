@@ -29,6 +29,7 @@
     /* background: #FFF; */
     padding: 0px 10px;
     box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .review-container{
@@ -42,6 +43,7 @@
     padding: 20px 20px;
     box-sizing: border-box;
     border-radius: 1rem;
+    box-shadow: 0px 43px 17.1px 0px rgba(67, 40, 24, 0.07);
 }
 
 .stars-container{
@@ -129,6 +131,26 @@
     text-transform: capitalize;
 }
 
+/* .slick-dots li button{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+} */
+
+.custom-dot {
+    width: 15px; /* Set the desired width */
+    height: 15px; /* Set the desired height */
+    background-color: #F8E9D2; /* Set the background color */
+    border-radius: 50%; /* Make it a circle */
+    margin: 0 8px; /* Adjust the margin between dots */
+    cursor: pointer; /* Add cursor pointer for better UX */
+    transition: background-color 0.3s ease;
+}
+
+.custom-dot.active {
+    background-color: #432818; /* Set the background color for the active dot */
+}
+
 @media screen and (min-width:1600px) {
     .star-place-review{
         width: 20px;
@@ -149,5 +171,11 @@
 @media screen and (max-width:785px){
     .review-div{
         padding: 10px 0px;
+        margin-bottom: 20px;
+    }
+    .custom-dot{
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
     }
 }

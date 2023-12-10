@@ -13,13 +13,13 @@ const Blog = ({isMobile}) => {
     const [selectedBlog,setSelectedBlog] = useState(0)
 
     const blogs = [
-        {id:0, title:'the perfect gift', text:'Giving a gift is a way to show that you care about someone.With abcHome, your gift will be both personal, create coziness and certainly also joy.', image:blog_1},
-        {id:1, title:'your childs safety', text:'Getting children to sleep safely and well at night can be a challenge for many parents.', image:blog_2}
+        {id:0, title:'The perfect gift', text:'Giving a gift is a way to show that you care about someone.With abcHome, your gift will be both personal, create coziness and certainly also joy.', image:blog_1},
+        {id:1, title:'Your childs safety', text:'Getting children to sleep safely and well at night can be a challenge for many parents.', image:blog_2}
     ]
 
     const side_blogs = [
-        {id:0, title:'harmless & child friendly', text: 'our letters are not only a unique', image:side_blog_1},
-        {id:1, title:'harmless & child friendly', text: 'our letters are not only a unique', image:side_blog_2},
+        {id:0, title:'Harmless & child friendly', text: 'Our letters are not only a unique', image:side_blog_1},
+        {id:1, title:'Harmless & child friendly', text: 'Our letters are not only a unique', image:side_blog_2},
     ]
 
     const handlePrev = () => {

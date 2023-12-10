@@ -1,39 +1,88 @@
 .navbar-dropdown{
-    background-color: rgba(214, 204, 194,0.8);
+    background-color: rgba(214, 204, 194,1);
     color: var(--white-color);
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
+    overflow-x: hidden;
+    transition: width 0.5s ease-in-out;
     /* border: 1px solid red; */
     margin-top: 5px;
     font-family: 'Exo';
     font-weight: 700;
     font-size: 1.1rem;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0px 0px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 0%;
+    height: 880vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 
 .navbar-dropdown.open{
-    height: 270px;
     box-shadow: 4px 4px 4px rgb(128, 128, 128);
+    width: 80%;
+    padding: 0px 20px;
+}
+
+.dropdown-logo-place{
+    width: 100%;
+    /* border: 1px solid green; */
+    border-bottom: 1px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.dropdown-logo{
+    width: 115px;
+    height: 100px;
 }
 
 .navbar-options-dropdown {
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
     list-style: none;
-    padding-top: 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-
+    justify-content: center;
+    padding-left: 0px;
 } 
 
-.nav-item-dropdown {
-    margin-bottom: 20px;
+.nav-item-dropdown{
+    margin: 20px;
+    font-family: Poppins;
     cursor: pointer;
-    font-family: Inter;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--primary-color);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    color: #432818;
+    opacity: 0.5;
 }
+
+.nav-item-dropdown.selected{
+    box-sizing: border-box;
+    color: #8D5A3B;
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(141, 90, 59, 0.12);
+}
+

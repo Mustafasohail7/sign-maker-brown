@@ -14,7 +14,8 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    padding: 2rem 0px;
+    padding: 4rem 0px;
+    padding-bottom: 5rem;
     box-sizing: border-box;
     color: #FFF;
 }
@@ -31,6 +32,7 @@
 
 .short-bio{
     font-family: Poppins;
+    color: rgba(255, 255, 255, 0.50);
     font-size: 17.841px;
     font-style: normal;
     font-weight: 400;
@@ -77,10 +79,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .footer-info-items p{
+    color: rgba(255, 255, 255, 0.50);
     font-family: Poppins;
     font-size: 17.841px;
     font-style: normal;

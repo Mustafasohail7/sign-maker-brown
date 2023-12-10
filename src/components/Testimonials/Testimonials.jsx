@@ -34,7 +34,7 @@ const Testimonials = () => {
                 </div>
             </div>
             <div className='testimonials'>
-              <SliderCarousel />
+              <SliderCarousel/>
             </div>
         </div>
     </div>

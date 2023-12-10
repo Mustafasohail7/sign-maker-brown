@@ -8,19 +8,7 @@ import Blog from '../components/Blog/Blog'
 import FAQ from '../components/FAQ/FAQ'
 import Footer from '../components/Footer/Footer'
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
-
-const HomePage = ({isMobile}) => {
-
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-}    
+const HomePage = ({isMobile}) => {  
 
   return (
     <div>

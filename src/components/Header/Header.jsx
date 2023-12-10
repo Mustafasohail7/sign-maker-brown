@@ -16,20 +16,6 @@ const Header = ({orders,options,setDropDown,path,setOverlayActive}) => {
     const [selected,setSelected] = useState(path[0].id)
     const home = path[0].id === 0
 
-    useEffect(() => { 
-        const handleScroll = () => {
-            if (window.scrollY > 500) {
-                setDropDown(false)
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    },[setDropDown])
-
     const toggleMenu = () => {
         setDropDown(prev => !prev)
     }
