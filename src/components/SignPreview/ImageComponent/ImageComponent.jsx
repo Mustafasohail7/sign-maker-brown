@@ -30,8 +30,8 @@ const ImageComponent = () => {
         <img src={selectedImage.src} className='image-preview-bg' alt='sign preview here'/>
         <div className='image-slider-container'>
           {images.map((image)=>(
-            <div key={image.id} className='slider-image-place'>
-              <img src={image.src} alt={image.name} className='slider-' />
+            <div key={image.id} className={`slider-image-place ${selectedImage.id===image.id ? 'selected' : ''}`} onClick={()=>setSelectedImage(image)}>
+              <img src={image.src} alt={image.name} className='slider-image' />
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 .sign-preview-div{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,19 +10,19 @@
 
 .sign-preview-container{
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     align-items: flex-start;
 }
 
 .image-component-div{
     width: 60%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .options-div{
     width: 40%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 @media screen and (max-width:785px){

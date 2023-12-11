@@ -1,0 +1,94 @@
+.image-information-div{
+    border: 1px solid red;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.image-information-container{
+    width: 95%;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-information-container{
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-info{
+    border: 1px solid blue;
+    display: flex;
+}
+
+.trustpilot-container{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.trustpilot-container p{
+    text-transform: capitalize;
+
+    color: var(--000, #000);
+    font-family: Roboto;
+    font-size: 14.76px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.664px; /* 140% */
+}
+
+.trustpilot-name-place{
+    width: 84px;
+    height: 21px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trustpilot-name{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trustpilot-reviews-place{
+    width: 94px;
+    height: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trustpilot-reviews{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delivery-info-container{
+    width: 100%;
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delivery-features-container{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.delivery-feature{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

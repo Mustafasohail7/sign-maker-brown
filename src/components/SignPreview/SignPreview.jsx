@@ -1,6 +1,7 @@
 import './SignPreview.css'
 
 import ImageComponent from './ImageComponent/ImageComponent'
+import ImageInformation from './ImageInformation/ImageInformation'
 import Options from './Options/Options'
 
 const SignPreview = () => {
@@ -9,6 +10,7 @@ const SignPreview = () => {
         <div className='sign-preview-container'>
             <div className='image-component-div'>
                 <ImageComponent/>
+                <ImageInformation/>
             </div>
             <div className='options-div'>
                 <Options/>
