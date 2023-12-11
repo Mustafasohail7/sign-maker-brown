@@ -42,7 +42,7 @@ const FAQ = () => {
                             {faq.question}
                         </p>
                         <div className='caret-img-place'>
-                            <img src={caret} className={`caret-img ${faq.id===selected ? 'rotate' : ''}`} />
+                            <img src={caret} className={`caret-img ${faq.id===selected ? '' : 'rotate'}`} />
                         </div>
                     </div>
                     <div className={`faq-answer ${selected===faq.id ? 'visible' : ''}`}>

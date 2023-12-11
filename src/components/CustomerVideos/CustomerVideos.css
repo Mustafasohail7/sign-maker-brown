@@ -82,9 +82,32 @@
 }
 
 .video-slider-div{
+    /* border: 1px solid red; */
     box-sizing: border-box;
     width: 100%;
     padding: 0rem 10rem;
+}
+
+@media screen and (max-width:1250px){
+    .video-white-boundary{
+        width: 250px;
+        height: 250px;
+    }
+    .video-white-boundary.center{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .video-white-boundary{
+        width: 200px;
+        height: 200px;
+    }
+    .video-white-boundary.center{
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media screen and (max-width:785px){
@@ -113,7 +136,7 @@
         gap: 1rem;
     }
     .video-slider-div{
-        padding: 0rem 3rem;
+        padding: 0rem 1rem;
     }
     .videos-heading{
         font-size: 25px;

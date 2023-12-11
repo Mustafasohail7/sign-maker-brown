@@ -267,8 +267,17 @@
         object-fit: cover;
     }
     .gallery-waves-container{
+        /* border: 1px solid red; */
         gap: 0.5rem;
         bottom: -50px;
+        width: 100%;
+        align-items: flex-end;
+        overflow: hidden;
+        /* right: auto; */
+    }
+    .gallery-waves-place{
+        width: 100px;
+        height: 22px;
     }
 }
 

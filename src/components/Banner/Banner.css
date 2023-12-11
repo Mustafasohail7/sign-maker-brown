@@ -276,7 +276,7 @@
 
 @media screen and (max-width:500px){
     .banner-bg-container{
-        height: min(500px,80vh);
+        height: min(600px,90vh);
     }
     .banner-img-container{
         width: 50%;

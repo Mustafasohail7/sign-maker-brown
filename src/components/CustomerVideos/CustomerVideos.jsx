@@ -14,9 +14,19 @@ const CustomerVideos = ({isMobile}) => {
 
     const videoRef = useState(null);
     const [isPaused, setIsPaused] = useState(true);
+    const [index, setIndex] = useState(0);
 
     const togglePause = (id) => {
-        if (id===1) {
+        if (!isMobile && id===1) {
+            if (videoRef.current) {
+                if (isPaused) {
+                  videoRef.current.play();
+                } else {
+                  videoRef.current.pause();
+                }
+                setIsPaused(!isPaused);
+            }
+        }else if(isMobile){
             if (videoRef.current) {
                 if (isPaused) {
                   videoRef.current.play();
@@ -37,12 +47,21 @@ const CustomerVideos = ({isMobile}) => {
 
     var settings = {
         dots: true,
+        centerMode: true,
+        rtl: true,
+        className: "center",
+        centerPadding: "60px",
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: null,
         prevArrow: null,
+        afterChange: (current) => {
+            videoRef.current.pause();
+            setIsPaused(true);
+            setIndex(current)
+        },
     }
 
   return (
@@ -54,13 +73,26 @@ const CustomerVideos = ({isMobile}) => {
                     isMobile ? (
                         <Slider {...settings} className="videos-carousel">
                             {videos.map((video) => (
-                                <div  key={video.id} className='video-slider-div'>
-                                    <div className='video-white-boundary'
-                                    // className={`video-white-boundary ${video.id===1 ? 'center' : ''}`}
+                                <div  key={video.id} 
+                                // className='video-slider-div'
+                                className={`video-slider-div ${video.id!==index ? 'sidemobile' : ''}`}
+                                >
+                                    <div 
+                                    className='video-white-boundary'
+                                    // className={`video-white-boundary ${video.id!==index ? 'sidemobile' : ''}`}
                                     >
                                         <div className='video-dotted-boundary'>
                                             <div className='video-holder'>
-                                                <img src={video.image} className='video-img' />
+                                                <video
+                                                    ref={video.id===1 ? videoRef : null}
+                                                    src={video.image}
+                                                    alt="Customer Video"
+                                                    className={`banner-img ${isPaused ? '' : 'hide'}`}
+                                                />
+                                                <button onClick={()=>togglePause(video.id)}
+                                                    className="video-play-btn">
+                                                    {video.id===index ? (isPaused ? <FaPlay/> : <FaPause/>) : <FaPlay/>}
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
