@@ -10,10 +10,10 @@ const FAQ = () => {
     const [selected, setSelected] = useState(null)
 
     const faqs = [
-        {id:0,question: 'Hvordan fungerer det?', answer: 'Bogstaverne kører på strøm og sættes sammen ved hjælp af magneter, der viderefører strømmen, så bogstaverne øjeblikkeligt lyser. Der er altså ikke brug for værktøj eller lignende. Strømforsyning følger automatisk altid gratis med i din ordre. NB: Der sidder et beskyttelsesfolie på bogstaverne når du modtager dem, som skal pilles af.'},
-        {id:1,question:'Hvad hører med til lampen?', answer:'Der medfølger en strømforsyning, som passer til det land, du bor i. Derudover medfølger der en fjernbetjening, som kan styre lysstyrke, farve og effekter. Der medfølger også en vægmonteringsplade, som gør det nemt at sætte bogstaverne op på væggen.'},
-        {id:2,question:'Er det muligt at få et mellemrum-stykke med til lampen?', answer:'Ja, det er muligt at få et mellemrum-stykke med til lampen. Det er dog ikke muligt at få et mellemrum-stykke med til lampen, hvis du vælger at købe en lampe med 3 bogstaver.'},
-        {id:3,question:'Er jeres produkter EU godkendt?',answer:'Ja, vores produkter er CE godkendt og lever op til alle EU krav.'},
+        {id:0,question: 'How does it work?', answer: 'The letters run on electricity and are connected using magnets that conduct the electricity, so the letters light up instantly. No tools or similar are needed. Power supply is always included for free with your order. Note: There is a protective film on the letters when you receive them, which needs to be removed.'},
+        {id:1,question:'What is included with the lamp?', answer:'A power supply is included that matches the country you live in. Additionally, a remote control is included that can control brightness, color, and effects. A wall mounting plate is also included, making it easy to mount the letters on the wall.'},
+        {id:2,question:'Is it possible to get a space piece with the lamp?', answer:'Yes, it is possible to get a space piece with the lamp. However, it is not possible to get a space piece with the lamp if you choose to buy a lamp with 3 letters.'},
+        {id:3,question:'Are your products EU approved?',answer:'Yes, our products are CE approved and comply with all EU requirements.'},
     ]
 
     const handleFAQ = (id) => {

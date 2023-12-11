@@ -59,6 +59,10 @@ const Gallery = ({isMobile}) => {
                 <img src={waves} className='gallery-waves' />
             </div>
         </div>
+        <div className='outer-circle-container'>
+            <div className='inner-circle-container'>
+            </div>
+        </div>
         <div className='gallery-container'>
             <div className='gallery-headings-container'>
                 <p className='gallery-heading'>gallery</p>

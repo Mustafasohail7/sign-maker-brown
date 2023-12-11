@@ -6,7 +6,7 @@ import twitter_logo from '../../assets/twitter.svg'
 import linkedin_logo from '../../assets/linkedin.svg'
 import logo from '../../assets/logo-white.svg'
 
-const Footer = () => {
+const Footer = ({isMobile}) => {
 
   const logos = [
     {id:0,name:'facebook',link:'https://www.facebook.com/',image:facebook_logo},
@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <div className='footer-div'>
         <div className='footer-container'>
-          <div className='footer-with-logo'> 
+          {!isMobile && <div className='footer-with-logo'> 
             <div className='footer-logo-container'>
               <img src={logo} className='logo' />
             </div>
@@ -32,8 +32,25 @@ const Footer = () => {
               </a>
             ))}
             </div>
-          </div>
+          </div>}
           <div className='footer-info-container'>
+              {isMobile && <div className="footer-info-part">
+              <div className='footer-with-logo'> 
+                <div className='footer-logo-container'>
+                  <img src={logo} className='logo' />
+                </div>
+                <div className='short-bio'>
+                Ønsker du nyheder, gode tilbud samt mulighed for at deltage i konkurrencer, så tilmeld dig vores nyhedsbrev.
+                </div>
+                <div className='socials-div'>
+                {logos.map((logo)=> (
+                  <a key={logo.id} href={logo.link} target='_blank' rel='noreferrer'>
+                    <img className='social-logos' src={logo.image} alt={`${logo.name} logo`}/>
+                  </a>
+                ))}
+                </div>
+              </div>
+              </div>}
               <div className='footer-info-part'>
                   <p className='footer-info-heading'>
                   Hovedmenu

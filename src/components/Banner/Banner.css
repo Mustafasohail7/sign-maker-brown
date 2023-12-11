@@ -344,23 +344,38 @@
     }
 }
 
+@media screen and (min-width:800px){
+    .banner-title{
+        /* border: 1px solid red; */
+    }
+    .banner-arc-container{
+        width: 100%;
+    }
+    .lamp{
+        font-size: 1rem;
+        min-width: 300px;
+        padding: 18px 30px;
+        border-radius: 35px;
+    }
+}
+
 @media screen and (min-width:1025px){
     .banner-title{
-        font-size: 3.2rem;
+        font-size: 2.5rem;
     }
     .date-timer-text h3{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .date-timer-text h5{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .timer-box{
-        font-size: 2.2rem;
+        font-size: 2rem;
         width: 55px;
         height: 55px;
     }
     .timer-text{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .banner-img-boundary{
         width: 450px;
@@ -374,9 +389,9 @@
     }
 
     .lamp{
-        padding: 12px 36px;
-        font-size: 2rem;
-        border-radius: 40px;
+        padding: 3rem 4rem;
+        font-size: 2.5rem;
+        border-radius: 5rem;
     }
     .date-timer-text h3{
         font-size: 3rem;

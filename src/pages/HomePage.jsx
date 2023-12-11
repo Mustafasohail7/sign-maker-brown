@@ -21,7 +21,7 @@ const HomePage = ({isMobile}) => {
           <Objects/>
           <Blog isMobile={isMobile}/>
           <FAQ/>
-          <Footer/>
+          <Footer isMobile={isMobile}/>
         </div>
     </div>
   )
