@@ -2,7 +2,7 @@ import './Options.css'
 
 import DropDown from './DropDown'
 
-const Options = ({isMobile}) => {
+const Options = ({isMobile,setUserText,render}) => {
 
   const rating = 4.8
   const symbol = '€'
@@ -42,6 +42,12 @@ const Options = ({isMobile}) => {
     {id:2, name:'Bruh'},
   ]
 
+  const handleChange = (e) => {
+    const newText = e.target.value
+    setUserText(newText)
+    render(newText)
+  }
+
 
   return (
     <div className='options-container'>
@@ -67,7 +73,10 @@ const Options = ({isMobile}) => {
           </div>}
         </div>
         {/* //TODO add input working  */}
-        <input type='text' placeholder='good morning' />
+        <input type='text' 
+        placeholder='good morning' 
+        onChange={handleChange}
+        />
       </div>
       <div className='symbols-input'>
         <p className='symbols-input-text label'>select symbols</p>

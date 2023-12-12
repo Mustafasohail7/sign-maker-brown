@@ -1,6 +1,6 @@
 .options-container{
     width: 90%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,12 +10,12 @@
 
 .name-container{
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .name-placeholder-div{
     width: 100%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +34,7 @@
 
 .options-review-container{
     width: 100%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     align-items: center;
     gap: 0.3rem;
@@ -56,7 +56,7 @@
 
 .text-input, .symbols-input, .size-input{
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +66,7 @@
 
 .price-container{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +118,7 @@
     outline: none;
 }
 
-.text-input input::placeholder{
+.text-input input::placeholder, .text-input input{
     color: var(--000, #000);
     font-family: Nunito;
     font-size: 15.795px;
@@ -128,9 +128,13 @@
     text-transform: uppercase;
 }
 
+.text-input input::placeholder{
+    opacity: 0.5;
+}
+
 .symbols-container{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -138,6 +142,11 @@
     box-sizing: border-box;
     padding: 20px 20px;
     background: rgba(141, 90, 59, 0.10);
+
+}
+
+.symbol{
+    cursor: pointer;
 }
 
 .symbol p{
@@ -156,7 +165,7 @@
 
 .misc-input{
     width: 90%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +174,7 @@
 
 .text-place-option, .connector-option, .connection-option{
     width: 30%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -202,6 +211,8 @@
     line-height: normal;
     letter-spacing: 0.277px;
     border: none;
+
+    cursor: pointer;
 }
 
 @media screen and (min-width:1800px){
@@ -232,7 +243,7 @@
         height: 80px;
         padding: 0 40px;
     }
-    .text-input input::placeholder{
+    .text-input input::placeholder,  .text-input input{
         font-size: 22px;
         line-height: auto;
     }
@@ -330,7 +341,7 @@
         border-radius: 7px;
         padding: 0px 15px;
     }
-    .text-input input::placeholder{
+    .text-input input::placeholder,  .text-input input{
         font-size: 10px;
     }
     .symbols-container{
@@ -356,5 +367,18 @@
         padding: 10px 0px;
         letter-spacing: 0.19px;
         border-radius: 8px;
+    }
+    .text-place-dropdown button, .connector-dropdown button, .connection-dropdown button{
+        padding: 15px !important;
+    }
+}
+
+@media screen and (max-width:400px){
+    .total-container{
+        padding: 5px;
+        min-width: 80px;
+    }
+    .total-container p{
+        font-size: 8px;
     }
 }

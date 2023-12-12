@@ -1,7 +1,7 @@
 .dropdown {
     position: relative;
     margin-right: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     /* width: 100%; */
 }
@@ -74,5 +74,12 @@
     .dropdown button img{
         width: 6px;
         height: 6px;
+    }
+    .dropdown-content{
+        min-width: 100px;
+    }
+    .dropdown-content p{
+        padding: 15px;
+        font-size: 10px;
     }
 }

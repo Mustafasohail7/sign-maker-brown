@@ -9,7 +9,7 @@ import bg_4 from '../../../assets/sign_background_4.png'
 import bg_5 from '../../../assets/sign_background_5.png'
 import bg_6 from '../../../assets/sign_background_6.png'
 
-const ImageComponent = () => {
+const ImageComponent = ({userText,signImages}) => {
 
   const images = [
     {id:0, name: 'Three Windows', src: bg_1},
@@ -34,6 +34,20 @@ const ImageComponent = () => {
               <img src={image.src} alt={image.name} className='slider-image' />
             </div>
           ))}
+        </div>
+        <div className="sign-container">
+          {signImages.map((signImage,index) => {
+              if(signImage.title === 'adapter'){
+                return <img key={index} src={signImage.src} alt={signImage.title} className={`adapter`}/>
+              }else if(signImage.title === 'space'){
+                return <img key={index} src={signImage.src} alt={signImage.title} className={`space`}/>
+              }
+              return (
+                <img key={index} src={signImage.src} alt={signImage.title} 
+                    className={`letter ${signImage.title==='I' || signImage.title==='one' ? 'slim' : ''}`}
+                />)
+          }
+          )}
         </div>
       </div>
     </div>
