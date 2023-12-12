@@ -1,33 +1,35 @@
 .image-information-div{
-    border: 1px solid red;
-    width: 100%;
+    /* border: 1px solid red; */
+    width: 95%;
     margin-top: 2rem;
+    margin: 2rem auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .image-information-container{
-    width: 95%;
-    border: 1px solid yellow;
+    width: 80%;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .payment-information-container{
     width: 100%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .payment-info{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
 }
 
 .trustpilot-container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
 }
@@ -66,29 +68,226 @@
 .trustpilot-reviews{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .delivery-info-container{
-    width: 100%;
-    border: 1px solid yellow;
+    width: 81%;
+    /* border: 1px solid yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .delivery-features-container{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0rem;
 }
 
 .delivery-feature{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: ; */
     align-items: center;
+    gap: 0.7rem;
 }
 
+.delivery-feature p{
+    color: var(--000, #000);
+    font-family: Poppins;
+    font-size: 13.217px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.592px; /* 148.235% */
+    /* border: 1px solid red; */
+}
 
+.setup-div{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.setup-div p{
+    color: #D6CCC2;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 8.597px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    /* border: 1px solid red; */
+    width: 70%;
+}
+
+.setup-place{
+    width: 28.478px;
+    height: 28.478px;
+    position: relative;
+    overflow: hidden;
+}
+
+.setup{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container{
+    /* border: 1px solid red; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text-heading{
+    color: var(--000, #000);
+    font-family: Poppins;
+    font-size: 20.104px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.726px; /* 113.043% */
+    letter-spacing: 0.568px;
+}
+
+.text-paragraph{
+    color: var(--000, #000);
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.271px; /* 195.872% */
+}
+
+@media screen and (min-width:1600px){
+    .delivery-features-container{
+        gap: 0.3rem;
+    }
+    .delivery-feature p{
+        font-size: 1.1rem;
+    }
+    .setup-div{
+        width: 120px;
+        height: 120px;
+    }
+    .setup-place{
+        width: 50px;
+        height: 50px;
+    }
+    .setup-div p{
+        font-size: 1rem;
+    }
+    .text-heading{
+        font-size: 2rem;
+    }
+    .text-paragraph{
+        font-size: 1.2rem;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .image-information-container{
+        width: 100%;
+    }
+    .text-container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:785px){
+    .delivery-info-container{
+        width: 83%;
+    }
+    .text-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .payment-info{
+        gap: 0.2rem;
+    }
+    .payment-logo-place{
+        width: 24px;
+        height: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    .payment-logo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .trustpilot-name-place{
+        width: 53px;
+        height: 13px;
+    }
+    .trustpilot-reviews-place{
+        width: 69px;
+        height: 20px;
+        /* border: 1px solid red; */
+    }
+    .trustpilot-container p{
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .delivery-feature-icon-place{
+        width: 14px;
+        height: 14px;
+        position: relative;
+        overflow: hidden;
+    }
+    .delivery-feature-icon{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .delivery-features-container{
+        /* border: 1px solid red; */
+        gap: 0.1rem;
+    }
+    .delivery-feature p{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .setup-div{
+        width: 46px;
+        height: 46px;
+    }
+    .setup-div p{
+        font-size: 6px;
+    }
+    .setup-place{
+        width: 18px;
+        height: 18px;
+    }
+    .text-heading{
+        font-size: 13px;
+        line-height: 14.338px; /* 110.29% */
+        letter-spacing: 0.358px;
+    }
+    .text-paragraph{
+        line-height: normal;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:350px){
+    .delivery-info-container{
+        width: 100%;
+    }
+    .image-information-div{
+        width: 100%;
+    }
+}

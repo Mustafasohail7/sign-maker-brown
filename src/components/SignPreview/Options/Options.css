@@ -1,0 +1,360 @@
+.options-container{
+    width: 90%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.name-container{
+    width: 100%;
+    border: 1px solid yellow;
+}
+
+.name-placeholder-div{
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.name-container-name{
+    color: var(--000, #000);
+    font-family: Poppins;
+    font-size: 16.594px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18.965px; /* 114.286% */
+}
+
+.options-review-container{
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.options-review{
+    color: #FCD240;
+}
+
+.options-review-text{
+    color: var(--Primary, #432818);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200%; /* 24px */
+    letter-spacing: -0.24px;
+}
+
+.text-input, .symbols-input, .size-input{
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.price-container{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.write-text-here, .symbols-input-text, .size-input-text, .text-place, .connector, .connection{
+    color: var(--000, #000);
+    font-family: Nunito;
+    font-size: 16.861px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.total-container{
+    padding: 15px;
+    border-radius: 11.759px;
+    border: 2.113px solid #8D5A3B;
+    box-shadow: 0px 0px 11.759px 0px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-container p{
+    color: var(--Primary, #432818);
+    font-family: Poppins;
+    font-size: 14.809px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.text-input input{
+    width: 100%;
+    height: 66px;
+    border-radius: 10px;
+    background: var(--Gray, #FAFAFB);
+    border: none;
+    padding: 0 30px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.text-input input::placeholder{
+    color: var(--000, #000);
+    font-family: Nunito;
+    font-size: 15.795px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.symbols-container{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    background: rgba(141, 90, 59, 0.10);
+}
+
+.symbol p{
+    color: var(--000, #000);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16.301px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.821px; /* 140% */
+}
+
+.size-dropdown{
+    width: 70%;
+}
+
+.misc-input{
+    width: 90%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 0.5rem; */
+}
+
+.text-place-option, .connector-option, .connection-option{
+    width: 30%;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.connection-option{
+    width: 32%;
+}
+
+.text-place-dropdown, .connector-dropdown, .connection-dropdown{
+    width: 100%;
+}
+
+.text-place-dropdown button, .connector-dropdown button, .connection-dropdown button{
+    padding: 22px 10px !important;
+}
+
+.add-to-cart-container{
+    width: 100%;
+}
+
+.add-to-cart{
+    width: 100%;
+    border-radius: 12px;
+    background: #8D5A3B;
+    padding: 14px 0px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16.606px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.277px;
+    border: none;
+}
+
+@media screen and (min-width:1800px){
+    .name-container-name{
+        font-size: 22px;
+        line-height: auto;
+    }
+    .options-review{
+        font-size: 32px;
+        line-height: auto;
+    }
+    .options-review-text{
+        font-size: 18px;
+        line-height: auto;
+    }
+    .write-text-here, .symbols-input-text, .size-input-text, .text-place, .connector, .connection{
+        font-size: 25px;
+        line-height: auto;
+    }
+    .total-container{
+        padding: 30px;
+    }
+    .total-container p{
+        font-size: 25px;
+        line-height: auto;
+    }
+    .text-input input{
+        height: 80px;
+        padding: 0 40px;
+    }
+    .text-input input::placeholder{
+        font-size: 22px;
+        line-height: auto;
+    }
+    .symbol p{
+        font-size: 22px;
+        line-height: auto;
+    }
+    .add-to-cart{
+        padding: 24px 0px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:1350px){
+    .connection-option{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .misc-input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .text-place-option, .connector-option{
+        width: 25%;
+    }
+    .connection-option{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .misc-input{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .text-place-option, .connector-option{
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+    .connection-option{
+        width: 60%;
+    }
+    .total-container{
+        padding: 10px 5px;
+    }
+    .total-container p{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:785px){
+    .options-div{
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+    .name-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .name-placeholder-div{
+        width: auto;
+    }
+}
+
+@media screen and (max-width:600px){
+    .name-container-name{
+        font-size: 12px;
+        line-height: normal;
+    }
+    .options-review{
+        /* border: 1px solid red; */
+        font-size: 17px;
+        line-height: normal;
+    }
+    .options-review-text{
+        font-size: 10px;
+        letter-spacing: -0.2px;
+    }
+    .total-container{
+        min-width: 140px;
+        padding: 10px;
+    }
+    .total-container p{
+        font-size: 12px;
+    }
+    .write-text-here, .symbols-input-text, .size-input-text, .text-place, .connector, .connection{
+        font-size: 12px;
+    }
+    .text-input input{
+        height: 44px;
+        border-radius: 7px;
+        padding: 0px 15px;
+    }
+    .text-input input::placeholder{
+        font-size: 10px;
+    }
+    .symbols-container{
+        padding: 13px;
+    }
+    .symbol p{
+        font-size: 12px;
+        line-height: 15.389px;
+    }
+    .misc-input{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .text-place-option, .connector-option{
+        width: 25%;
+    }
+    .connection-option{
+        width: 40%;
+    }
+    .add-to-cart{
+        font-size: 12px;
+        padding: 10px 0px;
+        letter-spacing: 0.19px;
+        border-radius: 8px;
+    }
+}

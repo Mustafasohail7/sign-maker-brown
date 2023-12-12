@@ -22,7 +22,10 @@
 
 .options-div{
     width: 40%;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width:785px){

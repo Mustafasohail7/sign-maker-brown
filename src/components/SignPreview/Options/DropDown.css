@@ -1,0 +1,78 @@
+.dropdown {
+    position: relative;
+    margin-right: 10px;
+    border: 1px solid red;
+
+    /* width: 100%; */
+}
+
+.dropdown button {
+    width: 100%;
+    padding: 22px 32px;
+    box-sizing: border-box;
+    background: var(--Gray, #FAFAFB);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.dropdown button span {
+    color: var(--000, #000);
+    font-family: Nunito;
+    font-size: 15.798px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.dropdown-content {
+    width: 100%;
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+  
+
+.dropdown-content p {
+    font-family: Nunito;
+    font-weight: 600;
+    padding: 22px 32px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+  /* Hover effect for options */
+.dropdown-content p:hover {
+    background-color: #ddd;
+}
+  
+/* Remove border-bottom from the last option */
+.dropdown-content p:last-child {
+    border-bottom: none;
+}
+  
+@media screen and (max-width:600px){
+    .dropdown button{
+        padding: 15px;
+        border-radius: 7px;
+    }
+    .dropdown button span{
+        font-size: 10px;
+    }
+    .dropdown button img{
+        width: 6px;
+        height: 6px;
+    }
+}

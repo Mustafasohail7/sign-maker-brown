@@ -5,7 +5,7 @@ const LettersPage = ({isMobile}) => {
   return (
     <>
         <Header/>
-        <SignPreview/>
+        <SignPreview isMobile={isMobile}/>
     </>
   )
 }
