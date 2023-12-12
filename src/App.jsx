@@ -10,9 +10,13 @@ import AcrylicLetters from './pages/AcrylicLettersPage'
 import LightBox from './pages/LightBoxPage'
 import Quote from './pages/QuotePage'
 
+import CartOverlay from './components/CartOverlay/CartOverlay'
+
 function App() {
 
   const [isMobile, setIsMobile] = useState(false);
+  const [order,setOrder] = useState([])
+  const [cartOpen, setCartOpen] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,29 +38,30 @@ function App() {
   const router = createBrowserRouter([
     {
       name: 'Home', path: '/', exact: true, 
-      element: <Home isMobile={isMobile} />,
+      element: <Home order={order} setCartOpen={setCartOpen} isMobile={isMobile} />,
       errorElement: <Error/>,
     },
     {
       name: '3D Letters', path: '/3d-letters', exact: true,
-      element: <Letters isMobile={isMobile} />,
+      element: <Letters order={order} setCartOpen={setCartOpen} isMobile={isMobile} setOrder={setOrder} />,
     },
     {
       name: 'Acrylic Letters', path: '/acrylic-letters', exact: true,
-      element: <AcrylicLetters isMobile={isMobile} />,
+      element: <AcrylicLetters order={order} setCartOpen={setCartOpen} isMobile={isMobile} />,
     },
     {
       name: 'LED Lightbox', path: '/led-lightbox', exact: true,
-      element: <LightBox isMobile={isMobile} />,
+      element: <LightBox order={order} setCartOpen={setCartOpen} isMobile={isMobile} />,
     },
     {
       name: 'Free Quote', path: '/quote', exact: true,
-      element: <Quote isMobile={isMobile} />,
+      element: <Quote order={order} setCartOpen={setCartOpen} isMobile={isMobile} />,
     }
   ])
 
   return (
     <>
+      <CartOverlay order={order} setOrder={setOrder} cartOpen={cartOpen} setCartOpen={setCartOpen}/>
       <RouterProvider router={router}/>
     </>
   )

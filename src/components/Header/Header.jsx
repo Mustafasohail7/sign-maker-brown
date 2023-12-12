@@ -9,7 +9,7 @@ import logo from '../../assets/logo.svg'
 import { BsCart } from 'react-icons/bs'
 import { FaBarsStaggered } from 'react-icons/fa6'
 
-const Header = ({orders,options,setDropDown,path,setOverlayActive}) => {
+const Header = ({order,options,setDropDown,path,setCartOpen}) => {
 
     const navigate = useNavigate()
 
@@ -39,6 +39,12 @@ const Header = ({orders,options,setDropDown,path,setOverlayActive}) => {
         navigate(options[id].link)
     }
 
+    const handleCartOpen = () => {
+        setCartOpen(prev => !prev)
+        console.log('cart open')
+        // setCartOpen(true)
+    }
+    
   return (
     <div className='header-div'>
         <div className={`header-container ${home ? 'transparent' : ''}`}>
@@ -73,10 +79,12 @@ const Header = ({orders,options,setDropDown,path,setOverlayActive}) => {
                         placeholder="Search..."
                         />
                     </div>
-                    <div className='cart-icon-container'>
+                    <div className='cart-icon-container'
+                        onClick={handleCartOpen}
+                    >
                         <BsCart className='cart'/>
                         {/* <div className='cart-count'>{orders.length}</div> */}
-                        <div className='cart-count'>0</div>
+                        <div className='cart-count'>{order.length}</div>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import './SignPreview.css'
 
-import {useState,useCallback} from 'react'
+import {useState} from 'react'
 
 import ImageComponent from './ImageComponent/ImageComponent'
 import ImageInformation from './ImageInformation/ImageInformation'
@@ -8,7 +8,7 @@ import Options from './Options/Options'
 
 import letters_manchester from '../../data/manchesterLetterData'
 
-const SignPreview = ({isMobile}) => {
+const SignPreview = ({isMobile,setOrder}) => {
 
   const [userText,setUserText] = useState('man')
   const [signImages,setSignImages] = useState([])
@@ -47,7 +47,7 @@ const SignPreview = ({isMobile}) => {
                 {!isMobile && <ImageInformation/>}
             </div>
             <div className='options-div'>
-                <Options isMobile={isMobile} setUserText={setUserText} render={renderSigns}/>
+                <Options isMobile={isMobile} setUserText={setUserText} render={renderSigns} setOrder={setOrder} />
                 {isMobile && <ImageInformation/>}
             </div>
         </div>

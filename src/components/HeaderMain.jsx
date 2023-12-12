@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 
 import {useState} from 'react'
 
-const HeaderMain = ({orders,setOverlayActive}) => {
+const HeaderMain = ({order,setCartOpen}) => {
 
     const options = [
       {id:0, name: 'home', link: '/'},
@@ -24,7 +24,7 @@ const HeaderMain = ({orders,setOverlayActive}) => {
 
   return (
     <>
-        <Header orders={orders} options={options} setDropDown={setDropDown} path={path} setOverlayActive={setOverlayActive}/>
+        <Header order={order} options={options} setDropDown={setDropDown} path={path} setCartOpen={setCartOpen}/>
         <DropDown options={options} dropDown={dropDown} setDropDown={setDropDown}/>
     </>
   )

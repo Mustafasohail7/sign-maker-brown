@@ -1,9 +1,9 @@
 import Header from '../components/HeaderMain'
 
-const LightBoxPage = ({isMobile}) => {
+const LightBoxPage = ({isMobile,order,setCartOpen}) => {
   return (
     <>
-        <Header />
+        <Header order={order} setCartOpen={setCartOpen}/>
     </>
   )
 }

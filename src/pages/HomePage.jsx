@@ -8,11 +8,11 @@ import Blog from '../components/Blog/Blog'
 import FAQ from '../components/FAQ/FAQ'
 import Footer from '../components/Footer/Footer'
 
-const HomePage = ({isMobile}) => {  
+const HomePage = ({order,setCartOpen,isMobile}) => {  
 
   return (
     <div>
-        <BannerMain/>
+        <BannerMain setCartOpen={setCartOpen} order={order}/>
         <div style={{backgroundColor: 'var(--secondary-bg-color)'}}>
           <Products/>
           <Gallery isMobile={isMobile}/>

@@ -1,8 +1,11 @@
 import './Options.css'
 
-import DropDown from './DropDown'
+import {useState} from 'react'
 
-const Options = ({isMobile,setUserText,render}) => {
+import DropDown from './DropDown'
+import { set } from 'mongoose'
+
+const Options = ({isMobile,setUserText,render,setOrder}) => {
 
   const rating = 4.8
   const symbol = '€'
@@ -42,12 +45,31 @@ const Options = ({isMobile,setUserText,render}) => {
     {id:2, name:'Bruh'},
   ]
 
+  const [textSize,setTextSize] = useState(size_options[0])
+  const [connector,setConnector] = useState(connector_options[0])
+  const [connection,setConnection] = useState(connection_options[0])
+
+  const [added,setAdded] = useState(false)
+
   const handleChange = (e) => {
     const newText = e.target.value
     setUserText(newText)
     render(newText)
   }
 
+  const handleOrderAdd = () => {
+    setAdded(true)
+    setOrder((prevOrder) => [...prevOrder,{
+      id: Date.now(),
+      size: textSize,
+      connector,
+      connection,
+    }])
+    setUserText('')
+    setTimeout(() => {
+      setAdded(false)
+    },2000)
+  }
 
   return (
     <div className='options-container'>
@@ -90,7 +112,7 @@ const Options = ({isMobile,setUserText,render}) => {
       </div>
       <div className='size-input'>
           <p className='size-input-text label'>select text size</p>
-          <DropDown classname="size-dropdown" options={size_options} />
+          <DropDown classname="size-dropdown" options={size_options} setter={setTextSize}/>
       </div>
       <div className='misc-input'>
           <div className='text-place-option'>
@@ -99,15 +121,15 @@ const Options = ({isMobile,setUserText,render}) => {
           </div>
           <div className='connector-option'>
             <p className='connector label'>connector</p>
-            <DropDown classname="connector-dropdown" options={connector_options}/>
+            <DropDown classname="connector-dropdown" options={connector_options} setter={setConnector}/>
           </div>
           <div className='connection-option'>
             <p className='connection label'>Connection with</p>
-            <DropDown classname="connection-dropdown" options={connection_options}/>
+            <DropDown classname="connection-dropdown" options={connection_options} setter={setConnection}/>
           </div>
       </div>
       <div className='add-to-cart-container'>
-        <button className='add-to-cart'>Add to Basket</button>
+        <button className='add-to-cart' onClick={handleOrderAdd}>{ added ? 'Added to Cart!' : 'Add to Basket'}</button>
       </div>
     </div>
   )

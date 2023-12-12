@@ -1,9 +1,9 @@
 import Header from '../components/HeaderMain'
 
-const AcrylicLettersPage = ({isMobile}) => {
+const AcrylicLettersPage = ({isMobile,order,setCartOpen}) => {
   return (
     <>
-        <Header />
+        <Header order={order} setCartOpen={setCartOpen} />
     </>
   )
 }

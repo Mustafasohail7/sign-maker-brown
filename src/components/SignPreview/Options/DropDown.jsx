@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import caret from '../../../assets/caret-down.svg'
 
-const Dropdown = ({ classname, options }) => {
+const Dropdown = ({ classname, options, setter }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -14,6 +14,7 @@ const Dropdown = ({ classname, options }) => {
   const handleSelect = (option) => {
     setIsOpen(false);
     setSelectedOption(option);
+    if(setter) setter(option)
   }
 
   return (
