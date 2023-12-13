@@ -19,8 +19,6 @@ const CartOverlay = ({order,cartOpen,setCartOpen}) => {
         }
     })
 
-    console.log(cartOpen)
-
   return (
     <div className={`cart-overlay-div ${cartOpen ? 'open' : ''}`}>
         <div className='cart-overlay-container'>
@@ -37,8 +35,8 @@ const CartOverlay = ({order,cartOpen,setCartOpen}) => {
                 <div className='proceed-btn-container'>
                     <button className='proceed-btn'>proceed</button>
                 </div>
-                <div className='continue-shopping'>
-                    <img className='contine-shopping-arrow' src={arrow} />
+                <div className='continue-shopping' onClick={()=>setCartOpen(false)}>
+                    <img className='continue-shopping-arrow' src={arrow} />
                     <p className='continue-shopping-text'>continue shopping</p>
                 </div>
             </div>

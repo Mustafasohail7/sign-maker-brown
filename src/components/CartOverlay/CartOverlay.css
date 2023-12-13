@@ -3,7 +3,8 @@
     top: 0; right: 0;
     width: 0%;
     overflow: hidden;
-    transition: width 0.2s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    height: 100%;
     background: var(--secondary-bg-color);
     z-index: 100;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
@@ -12,21 +13,22 @@
 .cart-overlay-div.open{
     width: 40%;
     height: 100%;
-    transition: width 0.2s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
 
 .cart-overlay-container{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 3rem;
     box-sizing: border-box;
     padding: 20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .cart-overlay-header{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +51,7 @@
 
 .cart-overlay-cross{
     cursor: pointer;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     font-size: 35px;
     transform: rotate(0deg);
     transition: transform 0.2s ease-in-out;
@@ -64,4 +66,153 @@
     color: var(--primary-color);
     transform: rotate(90deg);
     transition: transform 0.2s ease-in-out;
+}
+
+.cart-overlay-orders-container{
+    border: 2px solid black;
+    height: 200px;
+    width: 100%;
+}
+
+.cart-overlay-end{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.proceed-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proceed-btn{
+    width: 100%;
+    border-radius: 12px;
+    background: #8D5A3B;
+    padding: 14px 0px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16.606px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.277px;
+    border: none;
+
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.proceed-btn:hover{
+    background: var(--primary-color);
+    transition: background 0.3s ease-in-out;
+}
+
+.continue-shopping{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.continue-shopping:hover > .continue-shopping-arrow{
+    transform: rotate(180deg) translateX(50px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.continue-shopping-text{
+    font-family: Poppins;
+    color: var(--000, #000);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.continue-shopping-arrow{
+    transform: rotate(180deg);
+    transition: transform 0.1s ease-in-out;
+}
+
+@media screen and (min-width:1800px){
+    .cart-overlay-cross{
+        font-size: 50px;
+    }
+    .cart-overlay-orders-container{
+        height: 400px;
+    }
+    .proceed-btn{
+        padding: 20px 0px;
+        font-size: 24px;
+    }
+    .continue-shopping-text{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .cart-overlay-div.open{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:785px){
+    .cart-overlay-div.open{
+        width: 100%;
+    }
+    .proceed-btn-container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .cart-overlay-orders-container{
+        height: 500px;
+    }
+    .proceed-btn-container{
+        width: 100%;
+    }
+    .cart-overlay-heading{
+        font-size: 30px;
+    }
+    .continue-shopping:hover > .continue-shopping-arrow{
+        transform: rotate(180deg) translateX(30px);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media screen and (max-width:350px){
+    .cart-overlay-heading{
+        font-size: 25px;
+    }
+    .cart-overlay-cross{
+        font-size: 20px;
+    }
+    .cart-overlay-orders-container{
+        height: 400px;
+    }
+    .proceed-btn{
+        padding: 10px 0px;
+        font-size: 20px;
+    }
+    .continue-shopping-text{
+        font-size: 20px;
+    }
+    .continue-shopping-arrow{
+        width: 30px;
+        height: 30px;
+    }
 }
