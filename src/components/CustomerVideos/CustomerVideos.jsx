@@ -12,7 +12,7 @@ import dummy_vid from '../../assets/banner_video.mp4'
 
 const CustomerVideos = ({isMobile}) => {
 
-    const videoRef = useState(null);
+    const videoRef = useRef(null);
     const [isPaused, setIsPaused] = useState(true);
     const [index, setIndex] = useState(0);
 

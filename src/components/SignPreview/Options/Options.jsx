@@ -3,7 +3,6 @@ import './Options.css'
 import {useState} from 'react'
 
 import DropDown from './DropDown'
-import { set } from 'mongoose'
 
 const Options = ({isMobile,setUserText,render,setOrder}) => {
 
