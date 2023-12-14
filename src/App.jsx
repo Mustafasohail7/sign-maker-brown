@@ -11,6 +11,7 @@ import LightBox from './pages/LightBoxPage'
 import Quote from './pages/QuotePage'
 
 import CartOverlay from './components/CartOverlay/CartOverlay'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -63,6 +64,7 @@ function App() {
     <>
       <CartOverlay order={order} setOrder={setOrder} cartOpen={cartOpen} setCartOpen={setCartOpen}/>
       <RouterProvider router={router}/>
+      <Footer isMobile={isMobile} />
     </>
   )
 }
