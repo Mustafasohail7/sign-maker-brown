@@ -98,6 +98,7 @@
 }
 
 .newsletter-absolute{
+    /* border: 1px solid red; */
     position: absolute;
     top: -100px;
     left: 20px;
@@ -124,4 +125,94 @@
     height: 70%;
     margin: 15% 10%;
     object-fit: fill;
+}
+
+.newsletter-arrow-absolute{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 2;
+}
+
+@media screen and (max-width:1200px){
+    .newsletter-container{
+        width: 90%;
+    }
+    .newsletter-absolute{
+        top: -150px;
+    }
+    .newsletter-arrow-absolute{
+        top: -50px;
+    }
+    .newsletter-input{
+        width: 51%;
+        padding: 30px;
+    }
+    .newsletter-btn{
+        width: 58%;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:785px){
+    .newsletter-heading{
+        font-size: 22px;
+    }
+    .newsletter-text{
+        font-size: 14px;
+        width: 70%;
+    }
+    .newsletter-input{
+        padding: 20px;
+        font-size: 15px;
+    }
+    .newsletter-btn{
+        padding: 20px;
+        font-size: 15px;
+    }
+    .newsletter-absolute{
+        top: -100px;
+        left: 0px;
+    }
+    .newsletter-circle-place{
+        width: 100px;
+        height: 100px;
+    }
+    .newsletter-arrow-absolute{
+        top: -30px;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .newsletter-heading{
+        font-size: 14px;
+        line-height: normal;
+    }
+    .newsletter-text{
+        font-size: 12px;
+        width: 90%;
+    }
+    .newsletter-input, .newsletter-btn{
+        padding: 11px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    .newsletter-btn{
+        border-width: 1px;
+    }
+    .newsletter-absolute{
+        top: -50px;
+    }
+    .newsletter-circle-place{
+        width: 39px;
+        height: 41px;
+    }
+    .newsletter-arrow-absolute{
+        top: -20px;
+    }
+    .newsletter-arrow{
+        width: 21px;
+        height: 29px;
+    }
 }

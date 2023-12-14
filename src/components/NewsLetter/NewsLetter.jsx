@@ -18,6 +18,9 @@ const NewsLetter = () => {
                     <img src={envelope} className='newsletter-envelope' />
                 </div>
             </div>
+            <div className='newsletter-arrow-absolute'>
+                <img src={arrow} className='newsletter-arrow' />
+            </div>
             <p className='newsletter-heading'>Sign up for our newsletter</p>
             <p className='newsletter-text'>If you want news, good offers and the opportunity to participate in competitions, sign up for our newsletter.</p>
             <div className='newsletter-input-container'>
